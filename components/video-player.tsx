@@ -12,6 +12,7 @@ export function VideoPlayer({ videoSrc }: VideoPlayerProps) {
   const [isMuted, setIsMuted] = useState(false)
   const [showControls, setShowControls] = useState(false)
   const [thumbnailLoaded, setThumbnailLoaded] = useState(false)
+  const [videoError, setVideoError] = useState(false)
   const videoRef = useRef<HTMLVideoElement>(null)
   const thumbnailRef = useRef<HTMLImageElement>(null)
 
@@ -48,6 +49,10 @@ export function VideoPlayer({ videoSrc }: VideoPlayerProps) {
         }
       }
     }
+
+    video.onerror = () => {
+      setVideoError(true)
+    }
   }, [videoSrc])
 
   const togglePlay = () => {
@@ -55,7 +60,10 @@ export function VideoPlayer({ videoSrc }: VideoPlayerProps) {
       if (isPlaying) {
         videoRef.current.pause()
       } else {
-        videoRef.current.play()
+        videoRef.current.play().catch((err) => {
+          console.error("Error playing video:", err)
+          setVideoError(true)
+        })
       }
       setIsPlaying(!isPlaying)
     }
@@ -82,6 +90,17 @@ export function VideoPlayer({ videoSrc }: VideoPlayerProps) {
     }
   }
 
+  if (videoError) {
+    return (
+      <div className="relative w-full max-w-[550px] overflow-hidden rounded-xl shadow-2xl bg-slate-800 aspect-video flex items-center justify-center">
+        <div className="text-white text-center p-8">
+          <div className="text-xl font-semibold mb-2">Demo Video</div>
+          <p className="text-white/70">Experience our AI-powered networking platform in action</p>
+        </div>
+      </div>
+    )
+  }
+
   return (
     <div
       className="relative w-full max-w-[550px] overflow-hidden rounded-xl shadow-2xl bg-slate-100"
@@ -106,7 +125,14 @@ export function VideoPlayer({ videoSrc }: VideoPlayerProps) {
       )}
 
       {/* Video element */}
-      <video ref={videoRef} className="w-full h-auto object-cover" preload="metadata" muted={isMuted} playsInline>
+      <video
+        ref={videoRef}
+        className="w-full h-auto object-cover"
+        preload="metadata"
+        muted={isMuted}
+        playsInline
+        onError={() => setVideoError(true)}
+      >
         <source src={videoSrc} type="video/mp4" />
         Your browser does not support the video tag.
       </video>

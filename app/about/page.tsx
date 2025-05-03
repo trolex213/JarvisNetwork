@@ -106,7 +106,7 @@ export default function AboutPage() {
 
       {/* Header */}
       <header className="w-full z-50 bg-transparent">
-        <div className="container flex h-16 items-center">
+        <div className="container mx-auto flex h-16 items-center">
           {/* Logo */}
           <div className="flex items-center">
             <Link href="/" className="flex items-center">
@@ -159,7 +159,7 @@ export default function AboutPage() {
             scale: headerScale,
           }}
         >
-          <div className="container px-4 md:px-6">
+          <div className="container mx-auto px-4 md:px-6">
             <div className="flex flex-col items-start text-left space-y-4 max-w-3xl">
               <motion.h1
                 className="text-4xl md:text-6xl lg:text-7xl font-bold text-purple-900 tracking-tighter"
@@ -205,7 +205,7 @@ export default function AboutPage() {
 
         {/* Team Members Section */}
         <section className="py-20">
-          <div className="container px-4 md:px-6">
+          <div className="container mx-auto px-4 md:px-6">
             <div className="grid gap-12 md:gap-16">
               {teamMembers.map((member, index) => (
                 <TeamMemberCard key={member.name} member={member} index={index} />
@@ -216,7 +216,7 @@ export default function AboutPage() {
 
         {/* Mission Section */}
         <section className="py-20 relative overflow-hidden">
-          <div className="container px-4 md:px-6 relative z-10">
+          <div className="container mx-auto px-4 md:px-6 relative z-10">
             <MissionSection />
           </div>
 
@@ -229,7 +229,7 @@ export default function AboutPage() {
 
         {/* Join Us Section */}
         <section className="py-20 bg-gradient-to-r from-lavender-50 via-purple-100/30 to-lavender-50">
-          <div className="container px-4 md:px-6">
+          <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto text-center space-y-8">
               <motion.h2
                 className="text-3xl md:text-4xl font-bold text-purple-900"
@@ -267,7 +267,7 @@ export default function AboutPage() {
 
       {/* Footer */}
       <footer className="py-12 md:py-16 bg-transparent border-t border-purple-100">
-        <div className="container px-4 md:px-6">
+        <div className="container mx-auto px-4 md:px-6">
           <div className="text-center text-sm text-slate-500">© JarvisNetwork 2025. All rights reserved.</div>
         </div>
       </footer>

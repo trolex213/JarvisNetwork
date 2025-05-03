@@ -33,7 +33,7 @@ export default function PricingPage() {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5 }}
       >
-        <div className="container flex h-16 items-center">
+        <div className="container mx-auto flex h-16 items-center">
           {/* Logo */}
           <div className="flex items-center">
             <Link href="/" className="flex items-center">
@@ -80,7 +80,7 @@ export default function PricingPage() {
       <main className="flex-1">
         {/* Pricing Hero Section - Updated text */}
         <section className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container px-4 md:px-6">
+          <div className="container mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2 max-w-3xl">
                 <motion.h1
@@ -107,7 +107,7 @@ export default function PricingPage() {
 
         {/* Pricing Cards Section - Updated colors and price */}
         <section className="w-full pb-20">
-          <div className="container px-4 md:px-6">
+          <div className="container mx-auto px-4 md:px-6">
             <div className="mx-auto grid max-w-5xl gap-6 md:grid-cols-3">
               {/* Starter Plan - Updated border color and price */}
               <motion.div
@@ -257,7 +257,7 @@ export default function PricingPage() {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.7, delay: 1.2 }}
       >
-        <div className="container px-4 md:px-6">
+        <div className="container mx-auto px-4 md:px-6">
           <div className="text-center text-sm text-slate-600">© JarvisNetwork 2025</div>
         </div>
       </motion.footer>

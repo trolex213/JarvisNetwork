@@ -41,7 +41,7 @@ export function CTASection() {
           <div className="absolute w-full h-[30px] bg-indigo-600 opacity-90 translate-y-[20px]"></div>
         </motion.div>
 
-        <div className="container px-4 md:px-6 relative z-10">
+        <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="max-w-6xl mx-auto">
             <div className="grid gap-12 md:gap-0 place-items-center text-center">
               {/* Left column */}

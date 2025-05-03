@@ -49,7 +49,7 @@ export default function BlogPage() {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5 }}
       >
-        <div className="container flex h-16 items-center">
+        <div className="container mx-auto flex h-16 items-center">
           {/* Logo */}
           <div className="flex items-center">
             <Link href="/" className="flex items-center">
@@ -227,7 +227,7 @@ export default function BlogPage() {
               >
                 <div className="h-48 bg-gray-200">
                   <Image
-                    src={`/placeholder.svg?key=r53no&key=glttv&key=b117f&key=aj109&key=w7epm&key=jymvs&height=200&width=400&text=Article+${i + 1}`}
+                    src={`/placeholder.svg?key=xbzs6&key=r53no&key=glttv&key=b117f&key=aj109&key=w7epm&key=jymvs&height=200&width=400&text=Article+${i + 1}`}
                     alt={post.title}
                     width={400}
                     height={200}

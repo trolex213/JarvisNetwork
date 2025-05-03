@@ -36,7 +36,7 @@ export default function LandingPage() {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5 }}
       >
-        <div className="container flex h-16 items-center">
+        <div className="container mx-auto px-4 md:px-6 flex h-16 items-center">
           {/* Logo aligned with content below */}
           <div className="flex items-center">
             <Link href="/" className="flex items-center">
@@ -83,7 +83,7 @@ export default function LandingPage() {
       <main className="flex-1">
         {/* Hero Section */}
         <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48">
-          <div className="container px-4 md:px-6 relative">
+          <div className="container mx-auto px-4 md:px-6 relative">
             <div className="grid gap-6 lg:grid-cols-[1fr_600px] lg:gap-12 xl:grid-cols-[1fr_650px]">
               <motion.div
                 className="flex flex-col justify-center space-y-4 py-8"
@@ -152,7 +152,7 @@ export default function LandingPage() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
-          <div className="container px-4 md:px-6">
+          <div className="container mx-auto px-4 md:px-6">
             <div className="grid gap-12 lg:grid-cols-2">
               <motion.div
                 className="flex flex-col justify-center space-y-8"
@@ -220,7 +220,7 @@ export default function LandingPage() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          <div className="container px-4 md:px-6">
+          <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-5xl mx-auto">
               <motion.h2
                 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-slate-900 mb-8 text-center"
@@ -260,7 +260,7 @@ export default function LandingPage() {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.7, delay: 0.5 }}
       >
-        <div className="container px-4 md:px-6">
+        <div className="container mx-auto px-4 md:px-6">
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             <motion.div
               className="space-y-4"
