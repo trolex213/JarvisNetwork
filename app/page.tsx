@@ -138,7 +138,7 @@ export default function LandingPage() {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
               >
-                <VideoPlayer videoSrc="/demo.mp4" />
+                <VideoPlayer videoSrc="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/demo-gkVB6dmJBuLDBIKTjF988RMLo1lSAZ.mp4" />
               </motion.div>
             </div>
           </div>
